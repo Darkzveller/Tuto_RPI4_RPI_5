@@ -23,3 +23,29 @@ https://www.youtube.com/watch?v=pcn7WyxSHT0
 -- Installer vs code 
 
 https://code.visualstudio.com/docs/setup/raspberry-pi
+
+
+-- Installer git :
+
+
+On vérifie les mise a jour : 
+
+sudo apt update
+
+Installe Git avec la commande suivante :
+
+sudo apt install git
+
+Vérifie l’installation : 
+
+git --version
+
+Configurer le profil :
+
+git config --global user.name "Ton Nom"
+git config --global user.email "ton.email@example.com"
+
+Vérifier la configuration : 
+
+git config --global --list
+
