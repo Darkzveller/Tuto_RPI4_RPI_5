@@ -57,3 +57,17 @@ Vérifier la configuration :
 
 git config --global --list
 
+
+-- Installer Android TV :
+
+📺 CREEZ votre propre ANDROID TV BOX grâce à un Raspberry Pi !
+
+https://www.youtube.com/watch?v=_gk0qncIvX8 
+
+Installer Android TV 11 Sur Raspberry Pi:
+
+https://www.youtube.com/watch?v=kuWCA1xqcN4
+
+konstakang rpi 4 : 
+
+https://konstakang.com/devices/rpi4/
