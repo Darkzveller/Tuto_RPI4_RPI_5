@@ -1,4 +1,8 @@
-# Tuto_RPI5
+# Tuto_RPI4_RPI_5
+
+Commande de base : 
+
+Redémarré la raspberry pi : sudo reboot 
 
 -- Initiation RPI
 
@@ -19,6 +23,10 @@ https://www.youtube.com/watch?v=bfK_oP8fcEE&t=431s
 How to access Raspberry pi remotely with VNC direct connection and cloud connection
 
 https://www.youtube.com/watch?v=pcn7WyxSHT0
+
+Commande a tapé : 
+
+Installer vnc viewer : sudo apt-get install realvnc-vnc-server realvnc-vnc-viewer
 
 -- Installer vs code 
 
