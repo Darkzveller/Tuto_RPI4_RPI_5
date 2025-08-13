@@ -71,3 +71,9 @@ https://www.youtube.com/watch?v=kuWCA1xqcN4
 konstakang rpi 4 : 
 
 https://konstakang.com/devices/rpi4/
+
+-- Observer température cpu via le terminal
+
+Avoir la température a l'instant t : vcgencmd measure_temp
+
+Avoir la température en temps réel toutes les secondes : watch -n 1 vcgencmd measure_temp
