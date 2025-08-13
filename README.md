@@ -77,3 +77,11 @@ https://konstakang.com/devices/rpi4/
 Avoir la température a l'instant t : vcgencmd measure_temp
 
 Avoir la température en temps réel toutes les secondes : watch -n 1 vcgencmd measure_temp
+
+Avoir la température en temps réel toutes les secondes en sautant de ligne permettant ainsi d'avoir l'historique de température : while true; do vcgencmd measure_temp ; sleep 1 ; done
+
+Ajouter le plugin, pour observer la température en temps réel en espagnol Como ver la temperatura del raspberry pi :
+
+https://www.youtube.com/watch?v=YE0B5rLgD1c
+
+
