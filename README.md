@@ -1,10 +1,16 @@
 # Tuto_RPI4_RPI_5
 
+Site officiel de la raspberry : *https://www.raspberrypi.com/*
+
 -- Commande de base : 
 
 - Redémarré la raspberry pi : 
 
 sudo reboot 
+
+- Eteindre la raspberry pi :
+
+sudo poweroff
 
 -- Initiation RPI
 
@@ -62,7 +68,7 @@ git config --global --list
 
 -- Installer Android TV :
 
-📺 CREEZ votre propre ANDROID TV BOX grâce à un Raspberry Pi !
+📺 CREEZ votre propre ANDROID TV BOX grâce à un Raspberry Pi (⚠️**DECONSEILLER DE FAIRE CELA POUR DES RASPBERRY PI INFERIEUR AU 5, CAR NE CONTIENT PAS LES CODECS D'ANDROID**) !
 
 https://www.youtube.com/watch?v=_gk0qncIvX8 
 
