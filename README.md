@@ -12,6 +12,10 @@ sudo reboot
 
 sudo poweroff
 
+- Espace de stockage disponible :
+
+df -h
+
 -- Initiation RPI
 
 - Se connecter au RaspberryPi en SSH (Depuis un autre appareil)
