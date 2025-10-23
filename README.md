@@ -98,4 +98,18 @@ watch -n 1 vcgencmd measure_temp
 
 https://www.youtube.com/watch?v=YE0B5rLgD1c
 
+-- Installer Neofetch pour avoir des détails sur sa distribution :
+
+Installer git au préalabre : sudo apt install git -y
+
+cloner le dépot du projet : git clone https://github.com/dylanaraps/neofetch.git
+
+Etre dans le répértoire créer : cd neofetch
+
+Lance l'installation de neoftech :sudo make install
+
+Supprime le dossier préalablement créer : rm -rf neofetch/
+
+Lance le logiciel : neofetch
+
 
