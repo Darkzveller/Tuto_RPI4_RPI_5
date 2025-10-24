@@ -116,4 +116,9 @@ Supprime le dossier préalablement créer : rm -rf neofetch/
 
 Lance le logiciel : neofetch
 
+Stress test : 
+sudo apt install stress -y
+
+stress --cpu 4 --timeout 60 // Les 4 thread en meme temps pendant 60 secondes
+
 
