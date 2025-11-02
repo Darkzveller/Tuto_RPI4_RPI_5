@@ -15,6 +15,9 @@ sudo poweroff
 - Espace de stockage disponible :
 
 df -h
+-- PROBLEME SSH DEPUIS WINDOWS SI REINSTALLATION OS : 
+
+ssh-keygen -R 192.168.1.195 (permet de supprimer l'ancienne clé dite offensive)
 
 -- Initiation RPI
 
