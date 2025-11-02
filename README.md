@@ -125,14 +125,22 @@ sudo apt install stress -y
 
 stress --cpu 4 --timeout 60 // Les 4 thread en meme temps pendant 60 secondes
 
--- Changer langue du terminal 
+-- Changer langue du terminal de manière permanent
 
-export LANG=fr_FR.UTF-8
-export LANGUAGE=fr_FR:fr
-export LC_ALL=fr_FR.UTF-8
-sudo locale-gen
-sudo update-locale LANG=fr_FR.UTF-8 LANGUAGE=fr_FR:fr  
-source /etc/default/locale
-locale
+  sudo nano /etc/locale.gen // Décommente ou ajoute la ligne : fr_FR.UTF-8 UTF-8
 
-export LANG=fr_FR.UTF-8 && export LANGUAGE=fr_FR:fr && export LC_ALL=fr_FR.UTF-8 && sudo locale-gen && sudo update-locale LANG=fr_FR.UTF-8 LANGUAGE=fr_FR:fr && source /etc/default/locale && locale
+  sudo locale-gen
+
+  sudo update-locale LANG=fr_FR.UTF-8 LANGUAGE=fr_FR:fr  
+
+  source /etc/default/locale
+
+  locale
+
+-- Changer langue du terminal de manière provisoire
+
+  export LANG=fr_FR.UTF-8
+
+  export LANGUAGE=fr_FR:fr
+
+  export LC_ALL=fr_FR.UTF-8
