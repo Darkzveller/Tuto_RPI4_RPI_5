@@ -4,21 +4,30 @@ Site officiel de la raspberry : *https://www.raspberrypi.com/*
 
 - Commande de base : 
 
-- Redémarré la raspberry pi
+  - Redémarré la raspberry pi
 
-      sudo reboot 
+        sudo reboot 
 
-- Eteindre la raspberry pi 
+  - Eteindre la raspberry pi 
 
-      sudo poweroff
+        sudo poweroff
 
-- Espace de stockage disponible :
+  - Espace de stockage disponible :
 
-      df -h
+        df -h
 
-- PROBLEME SSH DEPUIS WINDOWS SI REINSTALLATION OS (permet de supprimer l'ancienne clé dite offensive) 
+  - PROBLEME SSH DEPUIS WINDOWS SI REINSTALLATION OS (permet de supprimer l'ancienne clé dite offensive) 
 
-      ssh-keygen -R 192.168.1.XX  ou ssh-keygen -R XX.local
+        ssh-keygen -R 192.168.1.XX  ou ssh-keygen -R XX.local
+  - Créer un alias permanent
+      - Ouvrir fichier de configuration shell
+    
+            nano ~/.bashrc
+
+       - Ajouter n'importe ou dans le fichier
+
+             alias maj='sudo apt update'
+   
 
 ## Initiation RPI
 
@@ -140,7 +149,7 @@ Doc vscode : https://code.visualstudio.com/docs/setup/raspberry-pi
 
 ### De manière permanent
 
-     sudo nano /etc/locale.gen // Décommente ou ajoute la ligne : fr_FR.UTF-8 UTF-8
+    sudo nano /etc/locale.gen // Décommente ou ajoute la ligne : fr_FR.UTF-8 UTF-8
 
     sudo locale-gen
 
@@ -157,3 +166,71 @@ Doc vscode : https://code.visualstudio.com/docs/setup/raspberry-pi
     export LANGUAGE=fr_FR:fr
 
     export LC_ALL=fr_FR.UTF-8
+
+## Installation compilateur C, debugger, make, C++, libx11
+
+- Installation de gcc/gdb/make
+
+      sudo apt install build-essential        ou        sudo apt install gdb && sudo apt install gcc && sudo apt install make
+- Installation de g++
+
+      sudo apt install g++
+
+- Installation de libx11
+
+      sudo apt install libx11-dev
+
+## Déport d’affichage avec SSH : X11 Forwarding
+
+Voir lien suivant détaillant la méthode : https://www.it-connect.fr/chapitres/deport-daffichage-avec-ssh-x11-forwarding/
+
+- Manipulation à effectuer sous l'os basé sur débian
+  PENSEZ A INSTALLER LIBX11 VOIR  "Installation compilateur C, debugger, make, C++, libx11"
+  - Installer xorg (pour afficher sur une machine windows avec xming) et xbase-clients 
+
+        sudo apt install xorg-dev xbase-clients
+  - Ouvrir le fichier suivant
+    
+        sudo nano /etc/ssh/sshd_config
+
+  - Décommenter les lignes doté comme ci dessous, puis faire Crtl + x, Y et tapé ENTREE  
+
+        X11Forwarding yes
+        #X11DisplayOffset 10
+        X11UseLocalhost yes
+        #PermitTTY yes
+
+        # Example of overriding settings on a per-user basis
+        #Match User anoncvs
+        X11Forwarding yes
+        #       AllowTcpForwarding no
+        #       PermitTTY no
+        #       ForceCommand cvs server
+  - Redémarrer le service
+
+        service sshd restart
+  - Installer xeyes
+
+        sudo apt-get install xeyes
+
+- Manipulation à effectuer sous l'os basé sur Windows
+  - Installer Xming X Server for Windows : https://sourceforge.net/projects/xming/
+  - Installer putty : https://putty.org/index.html
+  - Suivre vidéo fait par moi apres installation :
+  - Essayer de faire la manipulation suivante pour comprendre comment ca fonctionne, pré-requis installer wsl sur votre pc : https://www.youtube.com/watch?v=S15AtboQjg0
+ 
+  - Aprèes allez voir le premier lien donnée en début de cette partie qui explique comment paramétrer putty
+  - Ou voir vidéo fait par moi :
+
+Putty s'occupe de tout faire après.
+Mais si souhaiter passer par cmd ou par vscode : tapé ssh -X user@ip_rpi       METHODE NON TESTER
+
+## Installer python
+      sudo apt install python3-pip -y
+      sudo apt install python3-venv -y   # Pour créer des environnements virtuels
+
+      ou 
+
+      sudo apt install python3-pip python3-venv -y
+
+
