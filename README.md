@@ -2,145 +2,158 @@
 
 Site officiel de la raspberry : *https://www.raspberrypi.com/*
 
--- Commande de base : 
+- Commande de base : 
 
-- Redémarré la raspberry pi : 
+- Redémarré la raspberry pi
 
-sudo reboot 
+      sudo reboot 
 
-- Eteindre la raspberry pi :
+- Eteindre la raspberry pi 
 
-sudo poweroff
+      sudo poweroff
 
 - Espace de stockage disponible :
 
-df -h
--- PROBLEME SSH DEPUIS WINDOWS SI REINSTALLATION OS : 
+      df -h
 
-ssh-keygen -R 192.168.1.195 (permet de supprimer l'ancienne clé dite offensive)
+- PROBLEME SSH DEPUIS WINDOWS SI REINSTALLATION OS (permet de supprimer l'ancienne clé dite offensive) 
 
--- Initiation RPI
+      ssh-keygen -R 192.168.1.XX  ou ssh-keygen -R XX.local
 
-- Se connecter au RaspberryPi en SSH (Depuis un autre appareil)
+## Initiation RPI
 
-https://www.youtube.com/watch?v=lZ3AMFr9oMQ
+- Se connecter au RaspberryPi en SSH (Depuis un autre appareil) : https://www.youtube.com/watch?v=lZ3AMFr9oMQ
 
-- Raspberry Pi : ce qu'il faut connaître pour bien commencer
-
-https://www.youtube.com/watch?v=g9u6KleX7iU
-
--- VNC VIEWER
-
-- Raspberry Pi sans clavier ni écran ? Voici comment accéder à Linux à distance avec VNC. Tutoriel
-
-https://www.youtube.com/watch?v=bfK_oP8fcEE&t=431s
-
-- How to access Raspberry pi remotely with VNC direct connection and cloud connection
-
-https://www.youtube.com/watch?v=pcn7WyxSHT0
-
-- Commande a tapé, pour Installer vnc viewer   : 
-
-sudo apt-get install realvnc-vnc-server realvnc-vnc-viewer
-
--- Installer vs code 
-
-https://code.visualstudio.com/docs/setup/raspberry-pi
+- Raspberry Pi : ce qu'il faut connaître pour bien commencer : https://www.youtube.com/watch?v=g9u6KleX7iU
 
 
--- Installer git :
+## VNC VIEWER
+
+- Raspberry Pi sans clavier ni écran ? Voici comment accéder à Linux à distance avec VNC. Tutoriel : https://www.youtube.com/watch?v=bfK_oP8fcEE&t=431s
+
+- How to access Raspberry pi remotely with VNC direct connection and cloud connection : https://www.youtube.com/watch?v=pcn7WyxSHT0
+
+- Commande a tapé, pour Installer vnc viewer  
+
+      sudo apt-get install realvnc-vnc-server realvnc-vnc-viewer
+
+## Installer vs code 
+
+Doc vscode : https://code.visualstudio.com/docs/setup/raspberry-pi
 
 
-- On vérifie les mise a jour : 
-
-sudo apt update
+## Installer git :
 
 - Installe Git avec la commande suivante :
 
-sudo apt install git
+      sudo apt install git -y
 
-- Vérifie l’installation : 
+- Vérifie l’installation
 
-git --version
+      git --version
 
-- Configurer le profil :
+- Configurer le profil
 
-git config --global user.name "Ton Nom"
-git config --global user.email "ton.email@example.com"
+      git config --global user.name "Ton Nom"
+      git config --global user.email "ton.email@example.com"
 
-- Vérifier la configuration : 
+- Vérifier la configuration
 
-git config --global --list
+      git config --global --list
+
+- Voir également dépot suivant pour plus de détails : https://github.com/Darkzveller/config-memo_git/blob/main/README.md
 
 
--- Installer Android TV :
+## Installer Android TV (NE FONCTIONNE PAS BIEN VOIR PAS DU TOUT EN FONCTION DE L USAGE)
 
-📺 CREEZ votre propre ANDROID TV BOX grâce à un Raspberry Pi (⚠️**DECONSEILLER DE FAIRE CELA POUR DES RASPBERRY PI INFERIEUR AU 5, CAR NE CONTIENT PAS LES CODECS D'ANDROID**) !
+📺 CREEZ votre propre ANDROID TV BOX grâce à un Raspberry Pi (⚠️**DECONSEILLER DE FAIRE CELA POUR DES RASPBERRY PI INFERIEUR AU 5, CAR NE CONTIENT PAS LES CODECS D'ANDROID**) ! : https://www.youtube.com/watch?v=_gk0qncIvX8 
 
-https://www.youtube.com/watch?v=_gk0qncIvX8 
+- Installer Android TV 11 Sur Raspberry Pi : https://www.youtube.com/watch?v=kuWCA1xqcN4
 
-- Installer Android TV 11 Sur Raspberry Pi:
+- konstakang rpi 4 : https://konstakang.com/devices/rpi4/
 
-https://www.youtube.com/watch?v=kuWCA1xqcN4
+## Observer température cpu via le terminal
 
-- konstakang rpi 4 : 
+- Avoir la température a l'instant t
 
-https://konstakang.com/devices/rpi4/
+      vcgencmd measure_temp
 
--- Observer température cpu via le terminal
+- Avoir la température en temps réel toutes les secondes 
 
-- Avoir la température a l'instant t : 
+      watch -n 1 vcgencmd measure_temp
 
-vcgencmd measure_temp
+- Avoir la température en temps réel toutes les secondes en sautant de ligne permettant ainsi d'avoir l'historique de température 
 
-- Avoir la température en temps réel toutes les secondes : 
+      while true; do vcgencmd measure_temp ; sleep 1 ; done
 
-watch -n 1 vcgencmd measure_temp
+- Ajouter le plugin, pour observer la température en temps réel en espagnol Como ver la temperatura del raspberry pi : https://www.youtube.com/watch?v=YE0B5rLgD1c
 
-- Avoir la température en temps réel toutes les secondes en sautant de ligne permettant ainsi d'avoir l'historique de température :
+## Installer Neofetch pour avoir des détails sur sa distribution :
 
-  while true; do vcgencmd measure_temp ; sleep 1 ; done
+- Installer git au préalabre : 
+            
+      sudo apt install git -y
 
-- Ajouter le plugin, pour observer la température en temps réel en espagnol Como ver la temperatura del raspberry pi :
+- cloner le dépot du projet : 
 
-https://www.youtube.com/watch?v=YE0B5rLgD1c
+      git clone https://github.com/dylanaraps/neofetch.git
 
--- Installer Neofetch pour avoir des détails sur sa distribution :
+- Etre dans le répértoire créer : 
 
-Installer git au préalabre : sudo apt install git -y
+      cd neofetch
 
-cloner le dépot du projet : git clone https://github.com/dylanaraps/neofetch.git
+- Lance l'installation de neoftech
 
-Etre dans le répértoire créer : cd neofetch
+      sudo make install
 
-Lance l'installation de neoftech :sudo make install
+- Revenir dans le dossier parent
 
-Supprime le dossier préalablement créer : rm -rf neofetch/
+      cd
 
-Lance le logiciel : neofetch
+- Supprime le dossier préalablement créer :
 
--- Stress test : 
+      rm -rf neofetch/
 
-sudo apt install stress -y
+- Lance le logiciel :
 
-stress --cpu 4 --timeout 60 // Les 4 thread en meme temps pendant 60 secondes
+      neofetch
+  
+- Tout faire en une seule ligne de commande
 
--- Changer langue du terminal de manière permanent
+      git clone https://github.com/dylanaraps/neofetch.git && cd neofetch && sudo make install && cd && rm -rf neofetch/ && neofetch
 
-  sudo nano /etc/locale.gen // Décommente ou ajoute la ligne : fr_FR.UTF-8 UTF-8
+- Supprimer neofetch
 
-  sudo locale-gen
+      git clone https://github.com/dylanaraps/neofetch.git && cd neofetch && sudo make uninstall
 
-  sudo update-locale LANG=fr_FR.UTF-8 LANGUAGE=fr_FR:fr  
+## Stress test  
 
-  source /etc/default/locale
+- Commande pour l'installer 
 
-  locale
+      sudo apt install stress -y
 
--- Changer langue du terminal de manière provisoire
+- Exemple faire stresser les 4 thread/coeurs en meme temps pendant 60 secondes
 
-  export LANG=fr_FR.UTF-8
+      stress --cpu 4 --timeout 60 
 
-  export LANGUAGE=fr_FR:fr
+## Changer langue du terminal 
 
-  export LC_ALL=fr_FR.UTF-8
+### De manière permanent
+
+     sudo nano /etc/locale.gen // Décommente ou ajoute la ligne : fr_FR.UTF-8 UTF-8
+
+    sudo locale-gen
+
+    sudo update-locale LANG=fr_FR.UTF-8 LANGUAGE=fr_FR:fr  
+
+    source /etc/default/locale
+
+    locale
+
+### De manière provisoire
+
+    export LANG=fr_FR.UTF-8
+
+    export LANGUAGE=fr_FR:fr
+
+    export LC_ALL=fr_FR.UTF-8
