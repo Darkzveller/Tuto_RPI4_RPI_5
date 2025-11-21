@@ -171,7 +171,11 @@ Doc vscode : https://code.visualstudio.com/docs/setup/raspberry-pi
 
 - Installation de gcc/gdb/make
 
-      sudo apt install build-essential        ou        sudo apt install gdb && sudo apt install gcc && sudo apt install make
+      sudo apt install build-essential
+ou
+        
+      sudo apt install gdb && sudo apt install gcc && sudo apt install make
+
 - Installation de g++
 
       sudo apt install g++
@@ -229,7 +233,7 @@ Mais si souhaiter passer par cmd ou par vscode : tapé ssh -X user@ip_rpi       
       sudo apt install python3-pip -y
       sudo apt install python3-venv -y   # Pour créer des environnements virtuels
 
-      ou 
+ou 
 
       sudo apt install python3-pip python3-venv -y
 
