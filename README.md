@@ -29,7 +29,12 @@ Site officiel de la raspberry : *https://www.raspberrypi.com/*
              alias maj="echo -e 'J effectue l update...\n' && sudo apt update -y && echo -e '\n\nJ effectue l upgrade...\n' && sudo apt upgrade -y"
 
              neofetch
+  - Recharger un fichier sans fermer le terminal
 
+        source xxxxx.xxxx
+    comme par exemple
+    
+        source ~/.bashrc
    
 
 ## Initiation RPI
