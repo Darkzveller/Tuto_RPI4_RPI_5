@@ -24,9 +24,12 @@ Site officiel de la raspberry : *https://www.raspberrypi.com/*
     
             nano ~/.bashrc
 
-       - Ajouter n'importe ou dans le fichier
+       - Ajouter vers la fin du fichier
 
-             alias maj='sudo apt update'
+             alias maj="echo -e 'J effectue l update...\n' && sudo apt update -y && echo -e '\n\nJ effectue l upgrade...\n' && sudo apt upgrade -y"
+
+             neofetch
+
    
 
 ## Initiation RPI
