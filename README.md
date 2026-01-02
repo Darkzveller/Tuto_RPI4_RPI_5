@@ -247,7 +247,19 @@ Mais si souhaiter passer par cmd ou par vscode :
 Au moment de configurer xming, il faut cocher l'option "Disable acces control"
 
 Vidéo qui peut aider : https://www.youtube.com/watch?v=QtM3E0itQDI
-- Après avoir configurer xming, on ouvre le powershell et on tape : 
+- Après avoir configurer xming, on ouvre le powershell et on tape :
+  - Vérifier que xming fonctionne bien, tapé dasn le powershell :
+
+        netstat -aon | findstr 6000
+    Normalement vous aurez quelque chose qui ressemble à ca au niveau de la sortie :
+    
+        TCP    0.0.0.0:6000           0.0.0.0:0              LISTENING       14668
+        TCP    127.0.0.1:6000         127.0.0.1:64292        ESTABLISHED     14668
+        TCP    127.0.0.1:6000         127.0.0.1:64293        ESTABLISHED     14668
+        TCP    127.0.0.1:6000         127.0.0.1:64294        ESTABLISHED     14668
+        TCP    127.0.0.1:64292        127.0.0.1:6000         ESTABLISHED     14668
+        TCP    127.0.0.1:64293        127.0.0.1:6000         ESTABLISHED     14668
+        TCP    127.0.0.1:64294        127.0.0.1:6000         ESTABLISHED     14668
   - (X11 sur Windows avec Xming écoute, voir manuel)
     
         $env:DISPLAY="127.0.0.1:0.0"
