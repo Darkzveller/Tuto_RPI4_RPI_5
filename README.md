@@ -246,6 +246,7 @@ Voir lien suivant détaillant la méthode : https://www.it-connect.fr/chapitres/
 Mais si souhaiter passer par cmd ou par vscode :
 Au moment de configurer xming, il faut cocher l'option "Disable acces control"
 
+Vidéo qui peut aider : https://www.youtube.com/watch?v=QtM3E0itQDI
 - Après avoir configurer xming, on ouvre le powershell et on tape : 
   - (X11 sur Windows avec Xming écoute, voir manuel)
     
