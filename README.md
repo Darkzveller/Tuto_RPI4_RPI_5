@@ -29,9 +29,12 @@ Site officiel de la raspberry : *https://www.raspberrypi.com/*
 
        - Ajouter vers la fin du fichier
 
-             alias maj="echo -e 'J effectue l update...\n' && sudo apt update -y && echo -e '\n\nJ effectue l upgrade...\n' && sudo apt upgrade -y"
+        ###############################################################################################
+        #                                       Ma configuration 
 
-             neofetch
+        alias maj="echo -e 'J effectue l update...\n' && sudo apt update -y && echo -e '\n\nJ effectue l upgrade...\n' && sudo apt upgrade -y"
+
+        neofetch
   - Recharger un fichier sans fermer le terminal
 
         source xxxxx.xxxx
