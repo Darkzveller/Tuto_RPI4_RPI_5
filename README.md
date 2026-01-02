@@ -230,6 +230,9 @@ Voir lien suivant détaillant la méthode : https://www.it-connect.fr/chapitres/
   - Installer xeyes
 
         sudo apt-get install xeyes
+    si ca ne fonctionne pas, faire
+
+        sudo apt install x11-apps
 
 - Manipulation à effectuer sous l'os basé sur Windows
   - Installer Xming X Server for Windows : https://sourceforge.net/projects/xming/
@@ -241,7 +244,7 @@ Voir lien suivant détaillant la méthode : https://www.it-connect.fr/chapitres/
   - Ou voir vidéo fait par moi :
 
 Putty s'occupe de tout faire après.
-Mais si souhaiter passer par cmd ou par vscode : tapé ssh -X user@ip_rpi       METHODE NON TESTER
+Mais si souhaiter passer par cmd ou par vscode : tapé ssh -X user@ip_rpi       METHODE TESTER : NE FONCTIONNE PAS
 
 ## Installer python
       sudo apt install python3-pip -y
