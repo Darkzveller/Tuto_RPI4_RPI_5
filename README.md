@@ -242,9 +242,23 @@ Voir lien suivant détaillant la méthode : https://www.it-connect.fr/chapitres/
  
   - Aprèes allez voir le premier lien donnée en début de cette partie qui explique comment paramétrer putty
   - Ou voir vidéo fait par moi :
+  - Putty s'occupe de tout faire après.
+Mais si souhaiter passer par cmd ou par vscode :
+Au moment de configurer xming, il faut cocher l'option "Disable acces control"
 
-Putty s'occupe de tout faire après.
-Mais si souhaiter passer par cmd ou par vscode : tapé ssh -X user@ip_rpi       METHODE TESTER : NE FONCTIONNE PAS
+- Après avoir configurer xming, on ouvre le powershell et on tape : 
+  - (X11 sur Windows avec Xming écoute, voir manuel)
+    
+        $env:DISPLAY="127.0.0.1:0.0"
+  - -X → active le X11 forwarding via SSH (possibilité de rajouter le -Y apres le -X pour éviter tout problème avec xauth)
+  
+        ssh -X user@ip_rpi
+  - Si souhaiter remettre à défaut le env:DISPLAY soit le supprimer ou bien le remplacer par une valeur nul
+ 
+        Remove-Item Env:DISPLAY
+    et
+    
+        $env:DISPLAY=$null
 
 ## Installer python
       sudo apt install python3-pip -y
