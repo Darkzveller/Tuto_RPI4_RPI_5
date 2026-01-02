@@ -22,7 +22,10 @@ Site officiel de la raspberry : *https://www.raspberrypi.com/*
   - Créer un alias permanent
       - Ouvrir fichier de configuration shell
     
-            nano ~/.bashrc
+            sudo nano ~/.bashrc
+        ou
+ 
+            sudo nano /etc/bash.bashrc
 
        - Ajouter vers la fin du fichier
 
