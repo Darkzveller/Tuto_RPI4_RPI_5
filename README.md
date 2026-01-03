@@ -42,7 +42,13 @@ Site officiel de la raspberry : *https://www.raspberrypi.com/*
     
         source ~/.bashrc
    
+  - Changer la couleur du terminal dans le bashrc (normalement une ligne existe déja, on la commente et on la remplace par celle-ci) :
 
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+  - Recharger le fichier bash à l'aide de la commande source, et vérifier que la variable a changé à l'aide d'echo
+
+        echo $PS1
 ## Initiation RPI
 
 - Se connecter au RaspberryPi en SSH (Depuis un autre appareil) : https://www.youtube.com/watch?v=lZ3AMFr9oMQ
