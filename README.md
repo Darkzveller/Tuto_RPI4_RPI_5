@@ -34,7 +34,19 @@ Site officiel de la raspberry : *https://www.raspberrypi.com/*
 
         alias maj="echo -e 'J effectue l update...\n' && sudo apt update -y && echo -e '\n\nJ effectue l upgrade...\n' && sudo apt upgrade -y"
 
+        alias majg="echo -e 'J effectue l update du get ...\n' && sudo apt-get update -y && echo -e '\n\nJ effectue l upgrade du get ...\n' && sudo apt-get upgrade -y"
+
+        alias eteint='sudo halt'
+
+        alias see_temp_long='watch -n 0.1 vcgencmd measure_temp'
+
+        alias see_temp='vcgencmd measure_temp'
+
+        echo $DISPLAY
+
         neofetch
+
+
   - Recharger un fichier sans fermer le terminal
 
         source xxxxx.xxxx
