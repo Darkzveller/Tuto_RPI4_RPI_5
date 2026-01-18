@@ -305,7 +305,7 @@ ou
 
 Avant de pouvoir lancer un script automatiquement au démarrage du système, il est nécessaire de lui accorder les droits d’exécution. Le système Linux doit être autorisé à exécuter le fichier comme un programme. Dans cet exemple, on utilise un script Python nommé temp_rpi.py, situé dans le répertoire /home/pit/python/temp_rpi.
 
-      sudo chmod +x /home/pit/python/temp_rpi/temp_rpi.py
+    sudo chmod +x /home/pit/python/temp_rpi/temp_rpi.py
 
 - Création du service
 
@@ -348,31 +348,31 @@ On crée ensuite un fichier de service systemd. Ce fichier indique au système c
 
 Après la création du fichier, systemd doit recharger sa configuration afin de prendre en compte le nouveau service. On active ensuite le service pour qu’il se lance automatiquement au démarrage du système.
 
-      sudo systemctl daemon-reload
-      sudo systemctl enable temp_rpi.service
+    sudo systemctl daemon-reload
+    sudo systemctl enable temp_rpi.service
 
 - Test du démarrage du service
 
 Pour vérifier que le service fonctionne correctement sans redémarrer la Raspberry Pi, on peut le lancer manuellement.
 
-      sudo systemctl start temp_rpi.service
+    sudo systemctl start temp_rpi.service
 
 - Vérifier l’état du service
 
 Cette commande permet de savoir si le service est actif, en cours d’exécution ou en erreur.
 
-      sudo systemctl status temp_rpi.service
+    sudo systemctl status temp_rpi.service
 
 - Consulter les logs du service
 
 Les sorties du script Python (print, logging, erreurs) sont accessibles via les journaux systemd.
 
-      journalctl -u temp_rpi.service -f
+    journalctl -u temp_rpi.service -f
 
 - Arrêter ou redémarrer le service
 
 Pour arrêter ou relancer le service manuellement, utiliser les commandes suivantes.
 
-      sudo systemctl stop temp_rpi.service
-      sudo systemctl restart temp_rpi.service
+    sudo systemctl stop temp_rpi.service
+    sudo systemctl restart temp_rpi.service
 
