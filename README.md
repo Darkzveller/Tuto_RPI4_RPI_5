@@ -376,3 +376,14 @@ Pour arrêter ou relancer le service manuellement, utiliser les commandes suivan
     sudo systemctl stop temp_rpi.service
     sudo systemctl restart temp_rpi.service
 
+- Désactiver le service
+
+      sudo systemctl disable temp_rpi.service
+- Supprimer complètement le service
+
+      sudo rm /etc/systemd/system/temp_rpi.service
+
+- Recharger systemd
+
+      sudo systemctl daemon-reload
+
